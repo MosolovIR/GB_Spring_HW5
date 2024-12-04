@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Список пользователей</title>
+</head>
+
+<body>
+<h1>Пользователи: </h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Возраст</th>
+    </tr>
+    <tr th:each="person : ${persons}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.name}"></a></td>
+        <td th:text="${person.age}"></td>
+    </tr>
+</table>
+</body>
+</html>
