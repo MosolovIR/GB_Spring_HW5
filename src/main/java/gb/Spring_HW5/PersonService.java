@@ -11,13 +11,19 @@ public class PersonService {
     private PersonRepository personRepository;
 
     public List<Person> getAllPersons() {
-        personRepository.save(new Person(null, "Андрей", 28));
-        personRepository.save(new Person(null, "Борис", 30));
-        personRepository.save(new Person(null, "Влад", 19));
         return personRepository.findAll();
     }
 
     public Person getPersonById(Long id) {
         return personRepository.findById(id).get();
+    }
+    public Person savePerson(Person person) {
+        return personRepository.save(person);
+    }
+    public Person updatePerson(Person person) {
+        return personRepository.save(person);
+    }
+    public void deletePerson(Long id) {
+        personRepository.deleteById(id);
     }
 }
